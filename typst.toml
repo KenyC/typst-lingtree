@@ -1,0 +1,9 @@
+[package]
+name = "lingtree"
+version = "1.0.0"
+repository = "https://github.com/KenyC/typst-lingtree"
+entrypoint = "lib.typ"
+authors = ["Keny C <https://github.com/KenyC>"]
+license = "MIT"
+description = "Displays linguistic trees"
+
