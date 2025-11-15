@@ -7,6 +7,7 @@
 	child-spacing: default-child-spacing,
 	branch-stroke: (thickness: 0.75pt),
 	color: none,
+	align: none,
 )
 
 
@@ -17,6 +18,7 @@
 	child-spacing: none,
 	branch-stroke: none,
 	color: none,
+	align: none,
 	// if filled, defaults will be used for every node dominated by this one
 	// if none, inherit defaults from parent
 	// if none and tree is root, defaults is given by the `render' function
@@ -50,6 +52,7 @@
 		layer-spacing: layer-spacing,
 		child-spacing: child-spacing,
 		branch-stroke: branch-stroke,
+		align: align,
 		color: color,
 	)
 	flattened-nodes.push(new-node)
@@ -80,7 +83,10 @@
 			let n-children = node.n-children
 
 			if n-children == 0 {
-				let (tag, color,) = node
+				let (tag, color, align: node-align) = node
+				if node-align != none {
+					tag = align(node-align, tag)
+				}
 				if color != none {
 					tag = text(color, tag)
 				}

@@ -43,12 +43,14 @@
 	layer-spacing: none,
 	child-spacing: none,
 	branch-stroke: none,
+	align: none,
 	color: none,
 ) = {
 	let params = remove-nones((
 		layer-spacing: layer-spacing,
 		child-spacing: child-spacing,
 		branch-stroke: branch-stroke,
+		align: align,
 	))
 	let node-info = (
 		tag: content,
@@ -101,6 +103,10 @@
 	// If positive, it means parent_tag's left edge is to the right of the children's left edge.
 	// If negative, it means parent_tag's left edge is to the left of the children's left edge.
 	let tag = node.tag
+	let node-align = node.align
+	if node-align != none {
+		tag = align(node-align, tag)
+	}
 	if color != none and tag != none {
 		tag = text(color, tag)
 	}
