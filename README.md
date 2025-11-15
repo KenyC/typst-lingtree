@@ -114,6 +114,7 @@ These parameters may be passed:
   )
 )
 ```
+![Multi-dominant tree of 'I read every Russian novel'](gallery/adjust-params.svg)
 
 
 ### Movement arrow
@@ -190,6 +191,8 @@ If you rarely need to be more fancy than an arrow, it may be useful to encapsula
   },
 )
 ```
+
+![Tree with movement](gallery/movement.svg)
 
 
 ## See also
