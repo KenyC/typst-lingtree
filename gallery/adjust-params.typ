@@ -1,5 +1,5 @@
 #set page(width: auto, height: auto)
-#import "@local/lingtree:1.0.0": *
+#import "@local/lingotree:1.0.0": *
 
 
 #render(

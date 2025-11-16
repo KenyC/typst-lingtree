@@ -1,9 +1,9 @@
-#import "@local/lingtree:1.0.0"
+#import "@local/lingotree:1.0.0"
 #import "@preview/tidy:0.4.1"
 
 #show heading.where(level: 1): set align(center)
 #set document(
-  title: [_lingtree_],
+  title: [_lingotree_],
   author: "Keny Chatain",
 )
 #let VERSION = toml("typst.toml").package.version
@@ -67,8 +67,8 @@ Here is a simple example:
 		example-tree-code, 
 		mode: "markup", 
 		scope: (
-			tree:   lingtree.tree,
-			render: lingtree.render,
+			tree:   lingotree.tree,
+			render: lingotree.render,
 		)
 	)),
 )
@@ -77,5 +77,5 @@ Here is a simple example:
 = Reference
 
 
-#let docs = tidy.parse-module(read("lib.typ"), scope: (lingtree: lingtree))
+#let docs = tidy.parse-module(read("lib.typ"), scope: (lingotree: lingotree))
 #tidy.show-module(docs, style: tidy.styles.default)

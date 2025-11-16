@@ -30,7 +30,7 @@
 	.. children,
 	/// Distance between this root node and its immediate children. If none, a default value is used.
 	///
-	/// #let tree = lingtree.tree(tag: [A], [B], [C])
+	/// #let tree = lingotree.tree(tag: [A], [B], [C])
 	/// 
 	/// #table(
 	///   columns: (1fr, 1fr, 1fr),
@@ -39,16 +39,16 @@
 	///   [*`layer-spacing: 1em`*],
 	///   [*`layer-spacing: 2em`*],
 	///   [*`layer-spacing: 3em`*],
-	///   box(lingtree.render(tree, defaults: (layer-spacing: 1em))),
-	///   box(lingtree.render(tree, defaults: (layer-spacing: 2em))),
-	///   box(lingtree.render(tree, defaults: (layer-spacing: 3em))),
+	///   box(lingotree.render(tree, defaults: (layer-spacing: 1em))),
+	///   box(lingotree.render(tree, defaults: (layer-spacing: 2em))),
+	///   box(lingotree.render(tree, defaults: (layer-spacing: 3em))),
 	/// )
 	///
 	/// -> length | none
 	layer-spacing: none,
 	/// Distance between consecutive children of the root node. If none, a default value is used.
 	///
-	/// #let tree = lingtree.tree(tag: [A], [B], [C])
+	/// #let tree = lingotree.tree(tag: [A], [B], [C])
 	/// 
 	/// #table(
 	///   columns: (1fr, 1fr, 1fr),
@@ -57,16 +57,16 @@
 	///   [*`child-spacing: 0em`*],
 	///   [*`child-spacing: 2em`*],
 	///   [*`child-spacing: 5em`*],
-	///   box(lingtree.render(tree, defaults: (layer-spacing: 2em, child-spacing: 0em))),
-	///   box(lingtree.render(tree, defaults: (layer-spacing: 2em, child-spacing: 2em))),
-	///   box(lingtree.render(tree, defaults: (layer-spacing: 2em, child-spacing: 5em))),
+	///   box(lingotree.render(tree, defaults: (layer-spacing: 2em, child-spacing: 0em))),
+	///   box(lingotree.render(tree, defaults: (layer-spacing: 2em, child-spacing: 2em))),
+	///   box(lingotree.render(tree, defaults: (layer-spacing: 2em, child-spacing: 5em))),
 	/// )
 	///
 	/// -> length | none
 	child-spacing: none,
 	/// Stroke with which to draw the edge between the root node and its immediate children
 	/// 
-	/// #let tree = lingtree.tree(tag: [A], [B], [C])
+	/// #let tree = lingotree.tree(tag: [A], [B], [C])
 	/// 
 	/// #table(
 	///   columns: (1fr, 1fr),
@@ -74,21 +74,21 @@
 	///   align: center,
 	///   [*`stroke: blue + 3pt`*],
 	///   [*`stroke: (dash: "dashed")`*],
-	///   box(lingtree.render(tree, defaults: (layer-spacing: 2em, branch-stroke: blue + 3pt))),
-	///   box(lingtree.render(tree, defaults: (layer-spacing: 2em, branch-stroke: (dash: "dashed")))),
+	///   box(lingotree.render(tree, defaults: (layer-spacing: 2em, branch-stroke: blue + 3pt))),
+	///   box(lingotree.render(tree, defaults: (layer-spacing: 2em, branch-stroke: (dash: "dashed")))),
 	/// )
 	/// 
 	/// -> stroke | color | length | dictionary | none
 	branch-stroke: none,
 	/// Color of the edges, the tag and the leaf nodes. If none, the edges will be black and the content will have its default color.
 	///
-	/// #align(center, box(lingtree.render(lingtree.tree(tag: [A], [B], [C], defaults: (color: blue, layer-spacing: 2em)))))
+	/// #align(center, box(lingotree.render(lingotree.tree(tag: [A], [B], [C], defaults: (color: blue, layer-spacing: 2em)))))
 	///
 	/// -> color | none
 	color: none,
 	/// Alignments for the content of the tags and the content.
 	///
-	/// #let tree = lingtree.tree(tag: [VP\ likes carrots], [V\ likes], [NP\ carrots])
+	/// #let tree = lingotree.tree(tag: [VP\ likes carrots], [V\ likes], [NP\ carrots])
 	/// 
 	/// #table(
 	///   columns: (1fr, 1fr, 1fr),
@@ -97,9 +97,9 @@
 	///   [*`align: left`*],
 	///   [*`align: center`*],
 	///   [*`align: right`*],
-	///   box(lingtree.render(tree, defaults: (align: left))),
-	///   box(lingtree.render(tree, defaults: (align: center))),
-	///   box(lingtree.render(tree, defaults: (align: right))),
+	///   box(lingotree.render(tree, defaults: (align: left))),
+	///   box(lingotree.render(tree, defaults: (align: center))),
+	///   box(lingotree.render(tree, defaults: (align: right))),
 	/// )
 	///
 	/// -> alignment | none
@@ -107,11 +107,11 @@
 	/// This dictionary can take any of the value for the optional parameters above.
 	/// When a parameter value is specified here, it applies to this node and _all_ of its descendants.
 	///
-	/// #let tree = lingtree.tree.with(
+	/// #let tree = lingotree.tree.with(
 	/// 	tag: [DP],
-	/// 	lingtree.tree(
+	/// 	lingotree.tree(
 	/// 		[a],
-	///			lingtree.tree(
+	///			lingotree.tree(
 	///				[nice],
 	/// 			[person],
 	///			)
@@ -125,8 +125,8 @@
 	///   align: center,
 	///   [*`defaults: (layer-spacing: 1em)`*],
 	///   [*`layer-spacing: 1em`*],
-	///   box(lingtree.render(tree(defaults: (layer-spacing: 1em)))),
-	///   box(lingtree.render(tree(layer-spacing: 1em)))
+	///   box(lingotree.render(tree(defaults: (layer-spacing: 1em)))),
+	///   box(lingotree.render(tree(layer-spacing: 1em)))
 	/// )
 	///
 	/// -> dictionary | none

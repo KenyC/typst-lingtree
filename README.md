@@ -1,11 +1,11 @@
-# Lingtree
+# Lingotree
 
 ## Installation
 
 See [here](https://github.com/typst/packages?tab=readme-ov-file#local-packages) how to install this package locally. Essentially:
 
  - download this repository
- - rename it as: `{data-dir}/typst/packages/local/lingtree/1.0.0` where `{data-dir}` is:
+ - rename it as: `{data-dir}/typst/packages/local/lingotree/1.0.0` where `{data-dir}` is:
     - Linux: `$XDG_DATA_HOME` or, if not set, `~/.local/share` 
     - Mac: `~/Library/Application Support`
     - Windows: `%APPDATA%`
@@ -20,7 +20,7 @@ Below are a couple of illustrations of the package. Cf [manual](manual.pdf) for 
 
 
 ```typst
-#import "@preview/lingtree:1.0.0": *
+#import "@preview/lingotree:1.0.0": *
 
 #render(
 tree(
@@ -40,7 +40,7 @@ tree(
 #### Non-binary trees
 
 ```typst
-#import "@preview/lingtree:1.0.0": *
+#import "@preview/lingotree:1.0.0": *
 
 #render(
 tree(
@@ -80,7 +80,7 @@ These parameters may be passed:
 
 
 ```typst
-#import "@preview/lingtree:1.0.0": *
+#import "@preview/lingotree:1.0.0": *
 
 
 #render(
@@ -120,11 +120,11 @@ These parameters may be passed:
 
 ### Movement arrow
 
-In the spirit of modularity, `lingtree` intentionally does not provide movement arrows and other tree annotations. This is something you can implement, using `cetz` (draw tools) and `mannot` (to record positions in a document).
+In the spirit of modularity, `lingotree` intentionally does not provide movement arrows and other tree annotations. This is something you can implement, using `cetz` (draw tools) and `mannot` (to record positions in a document).
 
 
 ```typst
-#import "@preview/lingtree:1.0.0": *
+#import "@preview/lingotree:1.0.0": *
 #import "@preview/mannot:0.3.0": mark, annot-cetz
 #import "@preview/cetz:0.4.2"
 
