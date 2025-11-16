@@ -11,15 +11,16 @@ See [here](https://github.com/typst/packages?tab=readme-ov-file#local-packages) 
     - Windows: `%APPDATA%`
 
 
-TODO: upload to Typst Universe.
 
 ## Usage
+
+Below are a couple of illustrations of the package. Cf [manual](manual.pdf) for a full reference of the functions.
 
 ### Basic
 
 
 ```typst
-#import "@local/lingtree:1.0.0": *
+#import "@preview/lingtree:1.0.0": *
 
 #render(
 tree(
@@ -39,7 +40,7 @@ tree(
 #### Non-binary trees
 
 ```typst
-#import "@local/lingtree:1.0.0": *
+#import "@preview/lingtree:1.0.0": *
 
 #render(
 tree(
@@ -79,7 +80,7 @@ These parameters may be passed:
 
 
 ```typst
-#import "@local/lingtree:1.0.0": *
+#import "@preview/lingtree:1.0.0": *
 
 
 #render(
@@ -123,7 +124,7 @@ In the spirit of modularity, `lingtree` intentionally does not provide movement 
 
 
 ```typst
-#import "@local/lingtree:1.0.0": *
+#import "@preview/lingtree:1.0.0": *
 #import "@preview/mannot:0.3.0": mark, annot-cetz
 #import "@preview/cetz:0.4.2"
 
@@ -174,7 +175,7 @@ In the spirit of modularity, `lingtree` intentionally does not provide movement 
 )
 ```
 
-If you rarely need to be more fancy than an arrow, it may be useful to encapsulate the arrow drawing in a single command. Here is mine:
+If you rarely need to be more fancy than an arrow, it may be useful to encapsulate the arrow drawing in a single command. Here is how I do it:
 
 ```typst
 #let arrow(beg, end, control: (x: -1, y: -.5), stroke: black) = annot-cetz(
